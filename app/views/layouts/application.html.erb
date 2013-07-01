@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= page_title %></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
+
+<%= render 'layouts/head' %>
+
 <body>
 
-<%= render 'layouts/header' %>
+	<%= render 'layouts/header' %>
 
-<div id="wrapper">
-	<div id="page" class="container">
-		<div id="sidebar">
-			<%= render 'layouts/sidebar' %>
-		</div>
-		
-		<div id="content">
+	<div id="wrapper">
+		<div id="page" class="container">
+			<div id="sidebar">
+				<%= render 'layouts/sidebar' %>
+			</div>
 			
-			<%= yield %>
+			<div id="content">
+			
+				<%= yield %>
 
-		</div>
+			</div>
 	</div>
 </div>
 
