@@ -6,6 +6,9 @@ MusicalWaves::Application.routes.draw do
   # get "main/music"
   match 'music', :to => "main#music"
 
+  match 'artists', :to => "main#artists"
+  match 'concerts', :to => "main#concerts"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

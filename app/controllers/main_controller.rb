@@ -6,4 +6,12 @@ class MainController < ApplicationController
   def music
   	@title = "Music"
   end
+
+  def artists
+  	@title = "Artists"
+  end
+
+  def concerts
+  	@title = "Concerts"
+  end
 end
