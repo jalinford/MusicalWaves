@@ -1,0 +1,13 @@
+<h1>This is a test page</h1>
+<article id="artist">
+	<h2><%= @artist.name %></h2>
+	<h5><%= @artist.instrument %></h5>
+	<% if !@artist.picture.empty? %>
+		<a href="<%= @artist.picture %>" class="image image-full"><img src="<%= @artist.picture %>" alt="" /></a>
+	<% end %>
+	<section class="text">
+		<p>
+			<%= h(@artist.bio).gsub(/\n/, '</p><p>').html_safe %>
+		</p>
+	</section>
+</article>

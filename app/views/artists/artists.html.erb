@@ -6,15 +6,20 @@
 		<h2><%= artist.name %></h2>
 		<h5><%= artist.instrument %></h5>
 		<% if !artist.picture.empty? %>
-			<a href="<%= artist.picture %>" class="s_img"><img src="<%= artist.picture %>" alt="" /></a>
+			<a href="<%= artist.picture %>"><img src="<%= artist.picture %>" alt="" class="s_img" /></a>
 		<% end %>
 		<section class="text">
 			<p>
-				<%= h(artist.bio).gsub(/\n/, '</p><p>').html_safe %>
+				<% text = h(artist.bio).gsub(/\n/, '</p><p>').html_safe %>
+				<%= truncate(text, length: 290) %>
 			</p>
 		</section>
+
+		<a href="<%= show_path(:name => artist.name) %>" class="button">Read More</a>
+
 	</article>
 	<% end %>
 </section>
+
 
 
