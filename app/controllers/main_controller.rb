@@ -9,6 +9,7 @@ class MainController < ApplicationController
 
   def artists
   	@title = "Artists"
+    @artists = Artist.all
   end
 
   def concerts

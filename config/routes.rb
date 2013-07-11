@@ -1,12 +1,19 @@
 MusicalWaves::Application.routes.draw do
   
-  # get "main/home"
   root :to => 'main#home'
+  
+  ActiveAdmin.routes(self)
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  
+
+  # get "main/home"
+
 
   # get "main/music"
   match 'music', :to => "main#music"
 
   match 'artists', :to => "main#artists"
+  
   match 'concerts', :to => "main#concerts"
 
   # The priority is based upon order of creation:

@@ -3,3 +3,326 @@
 * Basic styling for the static pages
 *
 */
+
+@import "site-branding";
+
+/*
+* Overall
+*/
+
+html {
+	height: 100%;
+}
+
+h1, h2 {
+	margin: 0;
+	padding: 0x;
+	padding-top: 5px;
+	color: $secondary;
+	font: $heading-font;
+}
+
+h3, h4 {	
+	margin: 0;
+	padding: 0px;
+	color: $primary;
+	font: $subheading-font;
+}
+
+h1 {
+	font-weight: 800;
+	font-varian: small-caps;
+	font-stretch: expanded;
+	letter-spacing:2px;
+}
+
+h2 {
+	font-weight: 500;
+	text-size: 2.4em;
+	font-family: fantasy;
+}
+
+h3 {
+	font-weight: 300;
+	padding-top: 10px;
+}
+
+h4 {
+	font-size: 1.3em;
+	margin: 0px;
+	padding: 0px;
+}
+
+p, ol, ul {
+	margin-top: 0px;
+	padding: 0px;
+}
+
+p {
+	padding: 15px;
+	font: $primary-font;
+	line-height: 160%;
+	text-indent: 2em;
+}
+
+.text:first-letter { 
+	font-size:210%;
+	color: $secondary;
+}
+
+strong {
+}
+
+/*
+* Body
+*/
+
+body {
+	font-size: 12pt;
+	font-weight: 300;
+	margin: 0px;
+	padding: 0px;
+	font-size: 12pt;
+	font-weight: 300;
+	background-color: $primary;	
+	max-width:1200px;
+	min-width: 860px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#container {
+	background-color: $white;
+	border-radius: 8px;
+	margin: 20px;
+	padding: 10px;
+	box-shadow: 3px 3px 5px 2px;
+}
+
+
+/*
+* Header
+*/
+
+header {
+	margin: 0px;
+	padding: 0px;
+	height: 550px;
+	background: url('waves.jpg') no-repeat top center;
+	background-size: 100%;
+	box-shadow: inset 0 -10px 10px -10px rgba(0,0,0,.05);
+}
+
+header:before {
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('waves.jpg') no-repeat top center;
+	opacity: .1;
+}
+
+#header-wrapper {
+}
+
+#header {
+	position: relative;
+	height: 150px;
+}
+
+
+#logo {
+	position: absolute;
+	top: 3em;
+	left: 0;
+	width: 100%;
+	margin: 25px;
+	h1 {
+		display: inline-block;
+		font: $logo-font;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+	a {
+		text-decoration: none;
+		color: $white;
+		text-shadow:
+   			-2px -2px 0 $secondary,
+   			2px -2px 0 $secondary,
+    		-2px 2px 0 $secondary,
+   			2px 2px 0 $secondary; 
+	}
+
+}
+
+#logo:hover a {
+	opacity: 0.5;
+	text-decoration: none;
+}
+
+#menu {
+	position: absolute;
+	right: 0;
+	top: 0;
+	ul {
+		display: inline-block;
+	}
+	li {
+		display: block;
+		float: left;
+		text-align: center;
+	}
+	li a {
+		display: block;
+		padding: 0em 1.5em;
+		height: 150px;
+		letter-spacing: 0.20em;
+		line-height: 150px;
+		text-decoration: none;
+		font-size: 0.90em;
+		font-weight: 600;
+		text-transform: uppercase;
+		outline: 0;
+		color: $white;
+	}
+}
+	
+#menu li:hover a {
+	color: $primary;
+	text-decoration: none;
+}
+	
+#menu .current_page_item a {
+	background: rgba(0,0,0,0.1);
+	color: $white;
+}
+
+/*
+* Sections
+*/
+
+section {
+	overflow: hidden;
+
+	.content {
+		width: 70%;
+		float: left;
+		position: relative;
+		padding: 10px;
+	}
+
+}
+
+/*
+/* Sidebar  
+*/
+
+aside {
+	float: right;
+	width: 25%;
+	overflow: hidden;
+
+	 .title h2 {
+		font-size: 1.6em;
+	}
+
+	.box1 {
+		margin-bottom: 3em;
+	}
+}
+
+#mc_embed_signup{
+	clear:left;
+}
+
+/*
+/* Footer
+ */
+
+ footer {
+ 	.copyright {
+ 		padding: 5em 0em;
+	
+		 h3 {
+		 	font-family: Georgia, fantasy;
+			letter-spacing: 0.20em;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 0.80em;
+			color: $secondary;
+		}
+ 	}
+ }
+ 
+ /*
+/* Button
+ */
+
+ .button {
+	display: inline-block;
+	margin-top: 2em;
+	padding: 1em 3em;
+	background-color: $secondary;
+	border-radius: 10px;
+	-moz-transition: opacity 0.25s ease-in-out;
+	-webkit-transition: opacity 0.25s ease-in-out;
+	-o-transition: opacity 0.25s ease-in-out;
+	-ms-transition: opacity 0.25s ease-in-out;
+	transition: opacity 0.25s ease-in-out;
+	letter-spacing: 0.20em;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 0.90em;
+	color: $white;
+}
+
+.button:hover {
+	color: $primary;
+	text-decoration: none;
+}
+
+.button:active {
+}
+
+ /*
+/* Other
+ */
+
+
+img {
+	padding: 10px;
+	max-width: 95%;
+	max-height: 500px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ img.resize{
+    width: 70%;
+    height: auto;
+}
+
+	.title
+	{
+		margin-bottom: 3em;
+	}
+
+	.title h2
+	{
+		letter-spacing: 0.20em;
+		font-weight: 700;
+		font-size: 2em;
+		color: #171717;
+	}
+	
+	.title .byline
+	{
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 0.90em;
+		color: #6F6F6F;
+	}

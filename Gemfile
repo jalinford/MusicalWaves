@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
+gem 'activeadmin'
+gem 'meta_search',	'>= 1.1.0.pre'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -18,14 +21,16 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem "jquery-rails", "2.3.0"
 
 group :development do
   gem 'sqlite3'
+  gem 'rspec-rails', '~> 2.0'
 end
 
 group :test do
   gem 'sqlite3'
+  gem 'rspec-rails', '~> 2.0'
 end
 
 group :production do
