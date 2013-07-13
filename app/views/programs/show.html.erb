@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @program.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @program.description %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @program.website %>
+</p>
+
+
+<%= link_to 'Edit', edit_program_path(@program) %> | 
+<%= link_to 'New Performance/Concert', new_concert_path(program_id: @program) %> | 
+<%= link_to 'Back', programs_path %>

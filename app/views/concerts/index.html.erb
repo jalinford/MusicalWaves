@@ -1,0 +1,29 @@
+<h1>Listing Concerts/Performances</h1>
+
+<table>
+  <tr>
+    <th>Program ID</th>
+    <th>Date</th>
+    <th>Price</th>
+    <th>Tickets Link</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @concerts.each do |concert| %>
+  <tr>
+    <td><%= concert.program_id %></td>
+    <td><%= concert.date %></td>
+    <td><%= concert.price %></td>
+    <td><%= concert.tickets_link %></td>
+    <td><%= link_to 'Show', concert %></td>
+    <td><%= link_to 'Edit', edit_concert_path(concert) %></td>
+    <td><%= link_to 'Destroy', concert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Concert/Performance', new_concert_path %>

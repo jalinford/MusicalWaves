@@ -1,5 +1,10 @@
 MusicalWaves::Application.routes.draw do
   
+  resources :programs
+
+  resources :concerts
+
+
   root :to => 'main#home'
   
   ActiveAdmin.routes(self)
@@ -14,11 +19,9 @@ MusicalWaves::Application.routes.draw do
 
   match 'artists', :to => "artists#artists"
   
-  match 'concerts', :to => "main#concerts"
+  match 'concerts', :to => "main#concert"
 
   match '/artists/:name', :to => "artists#show", as: 'show'
-
-  match '/artists/test/:id', :to => "artists#test", as: 'test'
 
   resources :artists do
     resource :show

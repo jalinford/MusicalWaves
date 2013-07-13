@@ -7,27 +7,27 @@
 			<% if page == "Home" %>
 				<li class="current_page_item"><%= link_to "Home", root_path %></li>
 				<li><%= link_to "Artists", artists_path %></li>
-				<li><%= link_to "Concerts", concerts_path %></li>
+				<li><%= link_to "Concerts", programs_path %></li>
 				<li><%= link_to "Music", music_path %></li>
 			<% elsif page == "Artists" %>
 				<li><%= link_to "Home", root_path %></li>
 				<li class="current_page_item"><%= link_to "Artists", artists_path %></li>
-				<li><%= link_to "Concerts", concerts_path %></li>
+				<li><%= link_to "Concerts", programs_path %></li>
 				<li><%= link_to "Music", music_path %></li>
 			<% elsif page == "Concerts" %>
 				<li><%= link_to "Home", root_path %></li>
 				<li><%= link_to "Artists", artists_path %></li>
-				<li class="current_page_item"><%= link_to "Concerts", concerts_path %></li>
+				<li class="current_page_item"><%= link_to "Concerts", programs_path %></li>
 				<li><%= link_to "Music", music_path %></li>
 			<% elsif page == "Music" %>
 				<li><%= link_to "Home", root_path %></li>
 				<li><%= link_to "Artists", artists_path %></li>
-				<li><%= link_to "Concerts", concerts_path %></li>
+				<li><%= link_to "Concerts", programs_path %></li>
 				<li class="current_page_item"><%= link_to "Music", music_path %></li>
 			<% else %>
 				<li><%= link_to "Home", root_path %></li>
 				<li><%= link_to "Artists", artists_path %></li>
-				<li><%= link_to "Concerts", concerts_path %></li>
+				<li><%= link_to "Concerts", programs_path %></li>
 				<li><%= link_to "Music", music_path %></li>
 			<% end %>
 		</ul>

@@ -8,9 +8,4 @@ class ArtistsController < ApplicationController
 		@title = "Artists"
 		@artists = Artist.all
 	end
-
-	def test
-		@artist = Artist.find_by_id(params[:id])
-		@title = @artist.name
-	end	
 end
