@@ -1,5 +1,7 @@
 class ProgramsController < InheritedResources::Base
-	def programs
-  	@title = "Programs"
+	def index
+  	@title = "Concerts"
+  	@concerts = Concert.all
+  	@programs = Program.all
   end
 end

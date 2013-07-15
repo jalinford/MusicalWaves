@@ -17,5 +17,5 @@
 
 
 <%= link_to 'Edit', edit_program_path(@program) %> | 
-<%= link_to 'New Performance/Concert', new_concert_path(program_id: @program) %> | 
+<%= link_to 'New Performance/Concert', new_concert_path(:program_id => @program.id) %> | 
 <%= link_to 'Back', programs_path %>

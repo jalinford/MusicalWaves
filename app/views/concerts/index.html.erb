@@ -1,11 +1,13 @@
-<h1>Listing Concerts/Performances</h1>
+<h1>Listing Concert Performances</h1>
 
 <table>
   <tr>
-    <th>Program ID</th>
+    <th>Program</th>
     <th>Date</th>
+    <th>Time</th>
+    <th>Location</th>
     <th>Price</th>
-    <th>Tickets Link</th>
+    <th>Ticket website</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,8 +17,10 @@
   <tr>
     <td><%= concert.program_id %></td>
     <td><%= concert.date %></td>
+    <td><%= concert.time %></td>
+    <td><%= concert.location %></td>
     <td><%= concert.price %></td>
-    <td><%= concert.tickets_link %></td>
+    <td><%= concert.ticket_website %></td>
     <td><%= link_to 'Show', concert %></td>
     <td><%= link_to 'Edit', edit_concert_path(concert) %></td>
     <td><%= link_to 'Destroy', concert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -26,4 +30,4 @@
 
 <br />
 
-<%= link_to 'New Concert/Performance', new_concert_path %>
+<%= link_to 'New Concert', new_concert_path %>

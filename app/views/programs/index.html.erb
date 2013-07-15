@@ -1,27 +1,48 @@
-<h1>Listing programs</h1>
+<h1>The Programs and Concerts</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Website</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<p></p>
+<section class="list">
 <% @programs.each do |program| %>
-  <tr>
-    <td><%= program.title %></td>
-    <td><%= program.description %></td>
-    <td><%= program.website %></td>
-    <td><%= link_to 'Show', program %></td>
-    <td><%= link_to 'Edit', edit_program_path(program) %></td>
-    <td><%= link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
 
-<br />
+<article id="program">
+  <h2><%= program.title %></h2>
+
+  <p></p>
+  <h5>Performances:</h5>
+  <% @concerts.each do |concert| %>
+    <% if concert.program_id == program.id %>
+      <h4>Date: <%= concert.date %></h4>
+      <h4>Time: <%= concert.time %></h4>
+      <h4>Location: <%= concert.location %></h4>
+      <% if !concert.price.nil? %>
+        <h4>Price: $<%= concert.price %></h4>
+      <% end %>
+      <% if !concert.ticket_website.empty? %>
+        <a href="<%=concert.ticket_website %>" class="button">Buy Tickets</a>
+      <% end %>
+      <h5><%= link_to 'New', new_concert_path(:program_id => program.id) %> | 
+      <%= link_to 'Edit', edit_concert_path(concert) %> | 
+      <%= link_to 'Destroy', concert, method: :delete, data: { confirm: 'Are you sure?' } %></h5>
+      <p></p>
+    <% end %>
+  <% end %>
+
+  <section class="text">
+    <p>
+      <%= h(program.description).gsub(/\n/, '</p><p>').html_safe %>
+    </p>
+  </section>
+  <% if !program.website.empty? %>
+    <a href="<%=program.website %>" class="button">See More</a>
+  <% end %>
+  <p></p>
+  <h5><%= link_to 'Show', program %> | 
+  <%= link_to 'Edit', edit_program_path(program) %> | 
+  <%= link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' } %></h5>
+  <p></p>
+</article>
+<% end %>
+</section>
+
 
 <%= link_to 'New Program', new_program_path %>

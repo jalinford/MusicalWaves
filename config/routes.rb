@@ -1,9 +1,8 @@
 MusicalWaves::Application.routes.draw do
   
-  resources :programs
-
   resources :concerts
 
+  resources :programs
 
   root :to => 'main#home'
   

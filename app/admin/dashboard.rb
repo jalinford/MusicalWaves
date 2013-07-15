@@ -10,6 +10,25 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
+    columns do
+      column do
+        panel "Recent Artists" do
+          table_for Artist.order("name desc").limit(5) do
+            column :name do |artist|
+              link_to artist.name, admin_artist_path(artist)
+            end
+            column :instrument
+          end
+          strong { link_to "View All Artists", admin_artists_path }
+        end
+      end
+
+      column do
+        panel "Information" do
+          para "Let Andrew know if you ever need help with this!"
+        end
+      end
+
     # Here is an example of a simple dashboard with columns and panels.
     #
     # columns do
@@ -28,6 +47,6 @@ ActiveAdmin.register_page "Dashboard" do
     #       para "Welcome to ActiveAdmin."
     #     end
     #   end
-    # end
+    end
   end # content
 end
