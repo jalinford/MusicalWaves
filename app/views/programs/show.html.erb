@@ -15,6 +15,44 @@
   <%= @program.website %>
 </p>
 
+<h5>Performances:</h5>
+
+<% @program.concerts.each do |concert| %>
+
+<p>
+  <b>Program:</b>
+  <%= concert.program_id %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= concert.date %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= concert.time %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= concert.location %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= concert.price %>
+</p>
+
+<p>
+  <b>Ticket website:</b>
+  <%= concert.ticket_website %>
+</p>
+
+<p></p>
+
+<% end %>
+
 
 <%= link_to 'Edit', edit_program_path(@program) %> | 
 <%= link_to 'New Performance/Concert', new_concert_path(:program_id => @program.id) %> | 

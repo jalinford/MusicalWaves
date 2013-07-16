@@ -9,7 +9,7 @@
 
   <p></p>
   <h5>Performances:</h5>
-  <% @concerts.each do |concert| %>
+  <% program.concerts.each do |concert| %>
     <% if concert.program_id == program.id %>
       <h4>Date: <%= concert.date %></h4>
       <h4>Time: <%= concert.time %></h4>
