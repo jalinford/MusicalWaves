@@ -10,7 +10,6 @@
   <p></p>
   <h5>Performances:</h5>
   <% program.concerts.each do |concert| %>
-    <% if concert.program_id == program.id %>
       <h4>Date: <%= concert.date %></h4>
       <h4>Time: <%= concert.time %></h4>
       <h4>Location: <%= concert.location %></h4>
@@ -20,11 +19,7 @@
       <% if !concert.ticket_website.empty? %>
         <a href="<%=concert.ticket_website %>" class="button">Buy Tickets</a>
       <% end %>
-      <h5><%= link_to 'New', new_concert_path(:program_id => program.id) %> | 
-      <%= link_to 'Edit', edit_concert_path(concert) %> | 
-      <%= link_to 'Destroy', concert, method: :delete, data: { confirm: 'Are you sure?' } %></h5>
       <p></p>
-    <% end %>
   <% end %>
 
   <section class="text">
@@ -36,13 +31,9 @@
     <a href="<%=program.website %>" class="button">See More</a>
   <% end %>
   <p></p>
-  <h5><%= link_to 'Show', program %> | 
-  <%= link_to 'Edit', edit_program_path(program) %> | 
-  <%= link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' } %></h5>
+  <a href="<%= p_show_path(:title => program.title) %>" class="button">Read More</a>
   <p></p>
 </article>
 <% end %>
 </section>
 
-
-<%= link_to 'New Program', new_program_path %>

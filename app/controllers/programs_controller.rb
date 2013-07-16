@@ -3,11 +3,10 @@ class ProgramsController < InheritedResources::Base
   	@title = "Concerts"
   	@programs = Program.all
   end
-	def new
-		  @program = Program.new
-	  3.times do
-	    concert = @program.concerts.build
-	  end
-	end
+
+	def show
+		@program = Program.find_by_title(params[:title])
+		@title = @program.title
+	end	
 
 end

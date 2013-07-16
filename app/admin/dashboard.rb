@@ -10,10 +10,30 @@ ActiveAdmin.register_page "Dashboard" do
   #    end
   #  end
 
+
+    panel "Recently Updated Programs" do
+      table_for Program.order("updated_at desc").limit(5) do
+        column :title do |program|
+          link_to program.title, admin_program_path(program)
+        end
+        column :description
+
+        column("Artist - FIX LATER") {|program| link_to program.artists[0].name, admin_artists_path(program.artists[0])}
+        column("Artists") do |program|
+          a_array = Array.new
+          program.artists.each do |artist|
+            a_array.push(artist.name)
+          end
+          a_array.join(", ")
+          end
+      end
+      strong { link_to "View All Programs", admin_programs_path }
+    end
+
     columns do
       column do
-        panel "Recent Artists" do
-          table_for Artist.order("name desc").limit(5) do
+        panel "Recently Updated Artists" do
+          table_for Artist.order("updated_at desc").limit(5) do
             column :name do |artist|
               link_to artist.name, admin_artist_path(artist)
             end
@@ -22,7 +42,6 @@ ActiveAdmin.register_page "Dashboard" do
           strong { link_to "View All Artists", admin_artists_path }
         end
       end
-
       column do
         panel "Information" do
           para "Let Andrew know if you ever need help with this!"
