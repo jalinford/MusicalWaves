@@ -1,39 +1,30 @@
-<h1>The Programs and Concerts</h1>
+<h1>Concerts</h1>
 
-<p></p>
 <section class="list">
-<% @programs.each do |program| %>
-
-<article id="program">
-  <h2><%= program.title %></h2>
-
-  <p></p>
-  <h5>Performances:</h5>
-  <% program.concerts.each do |concert| %>
-      <h4>Date: <%= concert.date %></h4>
-      <h4>Time: <%= concert.time %></h4>
-      <h4>Location: <%= concert.location %></h4>
-      <% if !concert.price.nil? %>
-        <h4>Price: $<%= concert.price %></h4>
+  <% @programs.each do |program| %>
+  <article id="program">
+    <h2><%= program.title %></h2>
+    <h4><%= artist_list(program) %></h4>
+    <p></p>
+    <section class="concert-box">
+      <% program.concerts.each do |concert| %>
+        <div>  
+          <h5>Date:</h5><h6><%= concert.date.strftime('%A %B %d, %Y') %></h6>
+          <h5>Time:</h5><h6><%= concert.time %></h6>
+          <h5>Location:</h5><h6><%= concert.location %></h6>
+        </div>
       <% end %>
-      <% if !concert.ticket_website.empty? %>
-        <a href="<%=concert.ticket_website %>" class="button">Buy Tickets</a>
-      <% end %>
-      <p></p>
-  <% end %>
+    </section>
+    <section class="text">
+      <p>
+        <% text = h(program.description).gsub(/\n/, '<p>').html_safe %>
+        <%= truncate(text, length: 200) %>
+      </p>
+    </section>
 
-  <section class="text">
-    <p>
-      <%= h(program.description).gsub(/\n/, '</p><p>').html_safe %>
-    </p>
-  </section>
-  <% if !program.website.empty? %>
-    <a href="<%=program.website %>" class="button">See More</a>
+    <a href="<%= p_show_path(:title => program.title) %>" class="button">Read More</a>
+
+  </article>
   <% end %>
-  <p></p>
-  <a href="<%= p_show_path(:title => program.title) %>" class="button">Read More</a>
-  <p></p>
-</article>
-<% end %>
 </section>
 

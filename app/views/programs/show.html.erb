@@ -1,55 +1,45 @@
-<p id="notice"><%= notice %></p>
+<article id="program">
+  <h2><%= @program.title %></h2>
+  <h4><%= artist_list(@program) %></h4>
+  <p></p>
+  <section class="concert-box">
+    <% @program.concerts.each do |concert| %>
+      <div>
+        <h5>Date:</h5><h6><%= concert.date.strftime('%A %B %d, %Y') %></h6>
+        <h5>Time:</h5><h6><%= concert.time %></h6>
+        <h5>Location:</h5><h6><%= concert.location %></h6>
+        <% if !concert.price.nil? %>
+          <h5>Price:</h5><h6>$<%= concert.price %></h6>
+        <% end %>
+        <% if !concert.ticket_website.empty? %>
+          <a href="<%=concert.ticket_website %>" class="button" id="ticket-button">Buy Tickets</a>
+        <% end %>
+      </div>
+   <% end %>
+  </section>
+  <section class="text">
+    <p>
+      <%= h(@program.description).gsub(/\n/, '<p>').html_safe %>
+    </p>
+  </section>
 
-<p>
-  <b>Title:</b>
-  <%= @program.title %>
-</p>
+  <% if !@program.website.empty? %>
+    <a href="<%=@program.website %>" class="button">More About the Program</a>
+  <% end %>
+  
+  <section class="list">
+    <% @program.artists.each do |artist| %>
+      <article class="artist-small">
+        <% if !artist.picture.empty? %>
+          <a href="<%= artist.picture %>"><img src="<%= artist.picture %>" alt="" class="s_img" id="thumbnail"/></a>
+        <% end %>
+        <h3><%= artist.name %></h3>
+        <h5><%= artist.instrument %></h5>
+        <a href="<%= a_show_path(:name => artist.name) %>" class="button" id="artist-button">About Artist</a>
+      </article>
+    <% end %>
+  </section>
 
-<p>
-  <b>Description:</b>
-  <%= @program.description %>
-</p>
+</article>
 
-<p>
-  <b>Website:</b>
-  <%= @program.website %>
-</p>
-
-<h5>Performances:</h5>
-
-<% @program.concerts.each do |concert| %>
-
-<p>
-  <b>Program:</b>
-  <%= concert.program_id %>
-</p>
-
-<p>
-  <b>Date:</b>
-  <%= concert.date %>
-</p>
-
-<p>
-  <b>Time:</b>
-  <%= concert.time %>
-</p>
-
-<p>
-  <b>Location:</b>
-  <%= concert.location %>
-</p>
-
-<p>
-  <b>Price:</b>
-  <%= concert.price %>
-</p>
-
-<p>
-  <b>Ticket website:</b>
-  <%= concert.ticket_website %>
-</p>
-
-<p></p>
-
-<% end %>
-
+<stron><%= link_to "Back to Concerts", concerts_path %></strong>

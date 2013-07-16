@@ -19,7 +19,7 @@ MusicalWaves::Application.routes.draw do
 
   match '/artists/:name', :to => "artists#show", as: 'a_show'
 
-  match '/programs/:title', :to => "programs#show", as: 'p_show'
+  match '/concerts/:title', :to => "programs#show", as: 'p_show'
 
   resources :artists do
     resource :show

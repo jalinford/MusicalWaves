@@ -14,6 +14,11 @@ html {
 	height: 100%;
 }
 
+header, section, footer,
+aside, nav, article, figure {
+	display: block;
+}
+
 h1, h2, h3 {
 	margin: 0;
 	padding: 0x;
@@ -22,7 +27,7 @@ h1, h2, h3 {
 	font: $heading-font;
 }
 
-h4, h5 {	
+h4, h5, h6 {	
 	margin: 0;
 	padding: 0px;
 	color: $primary;
@@ -40,25 +45,26 @@ h1 {
 }
 
 h2 {
-	font-weight: 500;
+	font-weight: 620;
 	text-size: 2.6em;
 }
 
 h3 {
-	font-weight: 500;
-	text-size: 2.4em;
-	font-family: fantasy;
+	font-weight: 460;
+	text-size: 2.3em;
 }
 
 h4 {
 	font-weight: 300;
-	padding-top: 10px;
 }
 
 h5 {
 	font-size: 1.3em;
-	margin: 0px;
-	padding: 0px;
+}
+
+h6 {
+	font-size: 1.1em;
+	margin-bottom: 2px;
 }
 
 p, ol, ul {
@@ -82,22 +88,6 @@ p {
 }
 
 strong {
-}
-
-.list {
-	margin: 5x;
-	padding: 5px;
-	article {
-		border-top: 2px solid $secondary;
-	}
-	article:nth-child(1) {
-		border-top: none;
-	}
-}
-
-#artist {
-	padding-top: 10px;
-	padding-bottom: 25px;
 }
 
 /*
@@ -300,6 +290,7 @@ aside {
  .button {
 	display: inline-block;
 	margin-top: 2em;
+	margin-bottom: 2em;
 	padding: 1em 3em;
 	background-color: $secondary;
 	border-radius: 10px;
@@ -314,6 +305,43 @@ aside {
 	font-weight: 600;
 	font-size: 0.90em;
 	color: $white;
+	box-shadow: 1px 1px 2px 1px;
+}
+
+#ticket-button {
+	width: 70%;
+	display: block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	padding: 0.5em 1em;
+	border-radius: 7px;
+	font-weight: 500;
+	background-color: #C0C0C0;
+	color: black;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	text-decoration: underline;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+#artist-button  {
+	width: 30%;
+	display: block;
+	padding-top: 2px;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 0.5em 1em;
+	border-radius: 7px;
+	font-weight: 500;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	&:hover {
+		color: $primary;
+	}
 }
 
 .button:hover {
@@ -325,7 +353,7 @@ aside {
 }
 
  /*
-/* Other
+/* Image
  */
 
 
@@ -353,6 +381,13 @@ img {
 	margin: 20px;
 }
 
+#thumbnail {
+	max-width: 22%;
+	max-height: 140px;
+	float: left;
+	margin: 12px;
+}
+
 .b_img {
 
 }
@@ -378,3 +413,59 @@ img {
 		font-size: 0.90em;
 		color: #6F6F6F;
 	}
+
+/*
+* Special Sections
+*/
+
+.list {
+	margin: 5x;
+	padding: 5px;
+	article {
+		border-top: 2px solid $secondary;
+	}
+	article:nth-child(1) {
+		border-top: none;
+	}
+}
+
+.concert-box {
+	align: center;
+	margin: 0 auto;
+	overflow: hidden;
+	text-align: center;
+	div {
+		display: inline-block;
+		vertical-align: middle;
+		align: center;
+		text-align: left;
+		border-radius: 8px;
+		margin: 8px;
+		padding: 8px;
+		box-shadow: 3px 3px 5px 2px;
+		background-color: $primary;
+		width: 27%;
+				h5, h6 {
+			color: #C0C0C0;
+		}
+	}
+	div:nth-of-type(odd) {
+		background-color: $secondary;
+		h5, h6 {
+			color: black;
+		}
+	}
+}
+
+
+
+#artist {
+	padding-top: 10px;
+	padding-bottom: 25px;
+}
+
+.artist-small {
+	padding-top: 10px;
+	padding-bottom: 25px;
+}
+
