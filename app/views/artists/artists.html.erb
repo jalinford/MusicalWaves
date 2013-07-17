@@ -10,7 +10,7 @@
 		<% end %>
 		<section class="text">
 			<p>
-				<% text = h(artist.bio).gsub(/\n/, '</p><p>').html_safe %>
+				<% text = artist.bio.gsub(/\n/, ' ').html_safe %>
 				<%= truncate(text, length: 290) %>
 			</p>
 		</section>

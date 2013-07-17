@@ -6,7 +6,7 @@
 	<% end %>
 	<section class="text">
 		<p>
-			<%= h(@artist.bio).gsub(/\n/, '</p><p>').html_safe %>
+			<%= @artist.bio.gsub(/\n/, '</p><p>').html_safe %>
 		</p>
 	</section>
 </article>

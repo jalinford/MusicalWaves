@@ -19,7 +19,7 @@
   </section>
   <section class="text">
     <p>
-      <%= h(@program.description).gsub(/\n/, '<p>').html_safe %>
+      <%= h(@program.description).gsub(/\n/, '</p><p>').html_safe %>
     </p>
   </section>
 

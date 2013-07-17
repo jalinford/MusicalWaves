@@ -17,8 +17,8 @@
     </section>
     <section class="text">
       <p>
-        <% text = h(program.description).gsub(/\n/, '<p>').html_safe %>
-        <%= truncate(text, length: 200) %>
+        <% text = program.description.gsub(/\n/, ' ').html_safe %>
+        <%= truncate(text, length: 220) %>
       </p>
     </section>
 
