@@ -3,11 +3,11 @@
 <section class="list">
   <% @programs.each do |program| %>
   <article id="program">
-    <h2><%= program.title %></h2>
-    <h4><%= artist_list(program) %></h4>
+    <h2><%= link_to program.title, p_show_path(:title => program.title) %></h2>
+    <h4><%= artist_list(program).html_safe %></h4>
     <p></p>
     <section class="concert-box">
-      <% program.concerts.each do |concert| %>
+      <% concert_sort(program).each do |concert| %>
         <div>  
           <h5>Date:</h5><h6><%= concert.date.strftime('%A %B %d, %Y') %></h6>
           <h5>Time:</h5><h6><%= concert.time %></h6>
@@ -22,7 +22,7 @@
       </p>
     </section>
 
-    <a href="<%= p_show_path(:title => program.title) %>" class="button">Read More</a>
+    <a href="<%= p_show_path(:title => program.title) %>" class="button">More Information</a>
 
   </article>
   <% end %>

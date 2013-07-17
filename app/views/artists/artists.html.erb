@@ -1,9 +1,9 @@
 <h1>Artists</h1>
 
 <section class="list">
-	<% @artists.each do |artist| %>
+	<% artists_sorted(@artists).each do |artist| %>
 	<article id="artist">
-		<h2><%= artist.name %></h2>
+		<h2><%= link_to artist.name, a_show_path(:name => artist.name) %></h2>
 		<h5><%= artist.instrument %></h5>
 		<% if !artist.picture.empty? %>
 			<a href="<%= artist.picture %>"><img src="<%= artist.picture %>" alt="" class="s_img" /></a>

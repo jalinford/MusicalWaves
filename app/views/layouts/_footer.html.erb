@@ -1,4 +1,8 @@
 
-<footer class="copyright">
-	<h3>&copy; <%= Time.now.year %> Musical Waves | Photo by Tom Linford | Website Design by Andrew Linford</h3>
-</footer>
+
+<h3><%= link_to "Home", root_path %> | 
+<%= link_to "Artists", artists_path %> | 
+<%= link_to "Concerts", concerts_path %> |
+<%= link_to "Music", music_path %></h3>
+
+<h3>&copy; <%= Time.now.year %> Musical Waves | Photo by Tom Linford | Website Design by Andrew Linford</h3>

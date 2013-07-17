@@ -1,6 +1,10 @@
 <article id="artist">
 	<h2><%= @artist.name %></h2>
-	<h5><%= @artist.instrument %></h5>
+	<h4><%= @artist.instrument %></h4>
+	<% if @artist.programs.count > 0 %>
+		<h5>Upcoming Performances with Musical Waves: </h5>
+		<h5><%= performance_list(@artist).html_safe %></h5>
+	<% end %>
 	<% if !@artist.picture.empty? %>
 		<a href="<%= @artist.picture %>" class="b_img"><img src="<%= @artist.picture %>" alt="" class="b_img" /></a>
 	<% end %>

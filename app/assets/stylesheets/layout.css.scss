@@ -25,6 +25,14 @@ h1, h2, h3 {
 	padding-top: 5px;
 	color: $secondary;
 	font: $heading-font;
+	a {
+		color: $secondary;
+		text-decoration: none;
+		&:hover {
+
+			text-decoration: underline;
+		}
+	}
 }
 
 h4, h5, h6 {	
@@ -32,6 +40,14 @@ h4, h5, h6 {
 	padding: 0px;
 	color: $primary;
 	font: $subheading-font;
+	a {
+		color: $primary;
+		text-decoration: none;
+		&:hover {
+
+			text-decoration: underline;
+		}
+	}
 }
 
 h1 {
@@ -60,11 +76,13 @@ h4 {
 
 h5 {
 	font-size: 1.3em;
+	font-weight: 220;
 }
 
 h6 {
 	font-size: 1.1em;
 	margin-bottom: 2px;
+	font-weight: 150;
 }
 
 p, ol, ul {
@@ -269,16 +287,22 @@ aside {
  */
 
  footer {
- 	.copyright {
- 		padding: 5em 0em;
-	
-		 h3 {
-		 	font-family: Georgia, fantasy;
-			letter-spacing: 0.20em;
-			text-align: center;
-			text-transform: uppercase;
-			font-size: 0.80em;
+ 	padding: 0.7em 0em;
+	h3 {
+		font-family: Georgia, fantasy;
+		letter-spacing: 0.20em;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 0.80em;
+		color: $secondary;
+		line-height: 350%;
+		a {
 			color: $secondary;
+			text-decoration: none;
+			&:hover {
+				color: $white;
+				text-decoration: underline;
+			}
 		}
  	}
  }
@@ -358,7 +382,7 @@ aside {
 
 
 img {
-	margin: 10px;
+	margin: 15px;
 	max-width: 95%;
 	max-height: 500px;
 	display: block;
@@ -462,6 +486,16 @@ img {
 #artist {
 	padding-top: 10px;
 	padding-bottom: 25px;
+	h2, h4, h5 {
+		margin-bottom: 5px;
+	}
+	h5 {
+		margin-bottom: 1px;
+		padding-top: 3px;
+		a:hover {
+			color: $secondary;
+		}
+	}
 }
 
 .artist-small {

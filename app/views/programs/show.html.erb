@@ -1,9 +1,9 @@
 <article id="program">
   <h2><%= @program.title %></h2>
-  <h4><%= artist_list(@program) %></h4>
+  <h4><%= artist_list(@program).html_safe %></h4>
   <p></p>
   <section class="concert-box">
-    <% @program.concerts.each do |concert| %>
+    <% concert_sort(@program).each do |concert| %>
       <div>
         <h5>Date:</h5><h6><%= concert.date.strftime('%A %B %d, %Y') %></h6>
         <h5>Time:</h5><h6><%= concert.time %></h6>
@@ -33,7 +33,7 @@
         <% if !artist.picture.empty? %>
           <a href="<%= artist.picture %>"><img src="<%= artist.picture %>" alt="" class="s_img" id="thumbnail"/></a>
         <% end %>
-        <h3><%= artist.name %></h3>
+        <h3><%= link_to artist.name, a_show_path(:name => artist.name) %></h3>
         <h5><%= artist.instrument %></h5>
         <a href="<%= a_show_path(:name => artist.name) %>" class="button" id="artist-button">About Artist</a>
       </article>
