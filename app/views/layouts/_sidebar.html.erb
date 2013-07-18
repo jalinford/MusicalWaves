@@ -1,3 +1,34 @@
+<% if page == "Artists" %>
+	<section>
+		<h4>Artists</h4>
+		<ol class="sidebar-list">
+			<% artist_name_sort(Artist.all).each do |artist| %>
+				<li><%= link_to artist.name, a_show_path(:name => artist.name) %></li>
+			<% end %>
+		</ol>
+	</section>
+
+<% elsif page == "Concerts" %>
+	<section>
+		<h4>Concerts</h4>
+		<ol class="sidebar-list">
+			<% program_sort(future_programs(Program.all)).each do |program| %>
+				<li><%= link_to program.title, p_show_path(:title => program.title) %></li>
+			<% end %>
+		</ol>
+	</section>
+<% else %>
+	<section>
+		<h5>Next Performance</h5>
+		<ol class="sidebar-list">
+			<li><%= link_to next_program.title, p_show_path(:title => next_program.title) %></li>
+			<li><%= next_program.date_of_first_performance.strftime ('%d %b %y') %></li>
+
+		</ol>
+	</section>
+<% end %>
+
+
 <section >
 	<h5>Questions?</h5>
 	<p>Feel free to email us at ilanabardavid at gmail.com</p>

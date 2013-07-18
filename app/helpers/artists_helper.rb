@@ -7,6 +7,10 @@ module ArtistsHelper
 		artist.name.split(" ")[0]
 	end
 
+	def artist_name_sort(artists)
+        artists.sort { |a, b| [last_name(a), first_name(a)]  <=> [last_name(b), first_name(b)] }
+    end
+
 	def num_programs(artist)
 		artist.programs.count
 	end

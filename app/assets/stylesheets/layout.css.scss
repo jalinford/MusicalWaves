@@ -14,22 +14,18 @@ html {
 	height: 100%;
 }
 
-header, section, footer,
-aside, nav, article, figure {
-	display: block;
-}
-
 h1, h2, h3 {
 	margin: 0;
-	padding: 0x;
+	padding: 0;
+	padding-bottom: 1px;
 	padding-top: 5px;
 	color: $secondary;
-	font: $heading-font;
+	font-family: $heading2-font;
+	font-size: 3em;
 	a {
 		color: $secondary;
 		text-decoration: none;
 		&:hover {
-
 			text-decoration: underline;
 		}
 	}
@@ -39,7 +35,8 @@ h4, h5, h6 {
 	margin: 0;
 	padding: 0px;
 	color: $primary;
-	font: $subheading-font;
+	font-family: $subheading-font;
+	font-size: 1.6em;
 	a {
 		color: $primary;
 		text-decoration: none;
@@ -52,12 +49,12 @@ h4, h5, h6 {
 
 h1 {
 	font-weight: 800;
-	font-varian: small-caps;
 	font-stretch: expanded;
 	letter-spacing:2px;
 	text-align:center;
 	margin: 5px;
 	text-decoration: none;
+	font-family: $heading-font;
 }
 
 h2 {
@@ -71,28 +68,29 @@ h3 {
 }
 
 h4 {
-	font-weight: 310;
+	font-weight: 330;
 }
 
 h5 {
 	font-size: 1.3em;
-	font-weight: 220;
+	font-weight: 240;
 }
 
 h6 {
 	font-size: 1.1em;
 	margin-bottom: 2px;
-	font-weight: 180;
+	font-weight: 200;
 }
 
 p, ol, ul {
-	margin-top: 0px;
+	margin:.2em 0 .2em 0;
 	padding: 0px;
 }
 
 p {
 	padding: 15px;
-	font: $primary-font;
+	font-family: $primary-font;
+	font-size: 1.1em;
 	line-height: 160%;
 }
 
@@ -101,8 +99,9 @@ p {
 }
 
 .text:first-letter { 
-	font-size:210%;
+	font-size:220%;
 	color: $secondary;
+	margin: 1px;
 }
 
 strong {
@@ -185,7 +184,8 @@ header:before {
 	margin: 25px;
 	h1 {
 		display: inline-block;
-		font: $logo-font;
+		font-family: $logo-font;
+		font-size: 2.5em;
 		text-transform: uppercase;
 		font-weight: 700;
 		text-decoration: none;
@@ -198,13 +198,12 @@ header:before {
    			2px -2px 0 $secondary,
     		-2px 2px 0 $secondary,
    			2px 2px 0 $secondary; 
+   		&:hover a {
+			opacity: 0.5;
+			text-decoration: none;
+		}
 	}
 
-}
-
-#logo:hover a {
-	opacity: 0.5;
-	text-decoration: none;
 }
 
 #menu {
@@ -268,10 +267,6 @@ aside {
 	float: right;
 	width: 25%;
 	overflow: hidden;
-
-	 .title h2 {
-		font-size: 1.6em;
-	}
 
 	.box1 {
 		margin-bottom: 3em;
@@ -476,6 +471,14 @@ img {
 		h5, h6 {
 			color: #DCDCDC
 		}
+		h5 {
+			font-family: $heading-font;
+			padding-top: 0.1em;
+			margin-bottom: 2px;
+		}
+		h6 {
+			padding-bottom: 0.1em;
+		}
 	}
 	div:nth-of-type(odd) {
 		background: $primary; /* for non-css3 browsers */
@@ -488,6 +491,21 @@ img {
 	}
 }
 
+
+.sidebar-list {
+	padding: 5px;
+	padding-bottom: 8px;
+	line-height: 130%;
+	font-size: 1.15em;
+	li a {
+		text-decoration: underline;
+		color: $primary;
+	}
+	li a:hover {
+		text-decoration: none;
+		color: $secondary;
+	}
+}
 
 
 #artist {
