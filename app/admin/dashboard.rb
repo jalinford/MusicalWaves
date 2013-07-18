@@ -19,9 +19,13 @@ ActiveAdmin.register_page "Dashboard" do
         column :description do |program|
           program.description.slice(0, 150)
         end
-        column("Artists Names") do |program|
-          artist_list(program)
+        column("Artists") do |program|
+          a_array = Array.new
+          program.artists.each do |artist|
+           a_array.push(artist.name)
           end
+          a_array.join(", ")
+        end
       end
       strong { link_to "View All Programs", admin_programs_path }
     end

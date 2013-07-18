@@ -121,7 +121,7 @@ body {
 	padding: 0px;
 	font-size: 12pt;
 	font-weight: 300;
-	background-color: $background;	
+	background-color: $primary;	
 	max-width:1100px;
 	min-width: 860px;
 	margin-left:auto;
@@ -129,7 +129,7 @@ body {
 }
 
 #container {
-	background-color: $white;
+	background-color: $background;
 	border-radius: 8px;
 	margin: 20px;
 	padding: 10px;
@@ -311,14 +311,16 @@ aside {
 		font-size: 0.80em;
 		color: $secondary;
 		line-height: 350%;
-		font-weight: 220;
+		font-weight: 200;
 		a {
 			color: $secondary;
+			font-size: 1.5em;
+			font-weight: 260;
 			text-decoration: underline;
-			&:hover {
-				color: $primary;
-				text-decoration: none;
-			}
+		}
+		a:hover {
+			color: $white;
+			text-decoration: none;
 		}
  	}
  }
@@ -345,7 +347,6 @@ aside {
 	font-weight: 600;
 	font-size: 0.90em;
 	color: $white;
-	box-shadow: 1px 1px 2px 1px;
 }
 
 #ticket-button {
@@ -419,7 +420,6 @@ img {
 	max-height: 280px;
 	float: right;
 	margin: 20px;
-	border: 2px solid $primary;
 }
 
 #thumbnail {

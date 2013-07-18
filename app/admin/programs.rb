@@ -11,11 +11,6 @@ ActiveAdmin.register Program do
       	a_array.push(artist.name)
       end
       a_array.join(", ")
-      #table_for program.artists do
-        #column :name do |artist|
-        #link_to artist.name, admin_artist_path(artist)
-    	  #end
-    	#end
     end
     default_actions                   
   end     
@@ -25,7 +20,7 @@ ActiveAdmin.register Program do
   form do |f|                         
 	f.inputs "Program Details" do       
 	  f.input :title                  
-	  f.input :description               
+	  f.input :description, :hint => "Do not add any extra spaces between paragraphs"             
 	  f.input :website, :hint => "Place the whole URL of a related link"
 	  f.input :artists, :as => :check_boxes
 

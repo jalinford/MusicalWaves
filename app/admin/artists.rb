@@ -3,12 +3,15 @@ ActiveAdmin.register Artist do
   index do                            
     column :name                     
     column :instrument
+    column :bio do |artist|
+      artist.bio.slice(0, 250)
+    end
     column("Programs") do |artist|
       p_array = Array.new
       artist.programs.each do |program|
         p_array.push(program.title)
       end
-      p_array.join(", ")
+      p_array.join(", ").slice(0, 150)
     end
     default_actions                   
   end     
@@ -21,7 +24,7 @@ ActiveAdmin.register Artist do
       f.input :name                  
       f.input :instrument               
       f.input :picture, :hint => "Place the whole URL of the photo"
-      f.input :bio 
+      f.input :bio, :hint => "Do not add any extra spaces between paragraphs"
       f.input :programs, :as => :check_boxes
     end                               
     f.actions                         
