@@ -4,17 +4,23 @@
 
 /*
 * Color Schemes
+* Old
+* $primary: #514766;
+* $secondary: #BA6126;. #edc382
 */
 $white: #FFFFFF;
-$primary: #514766;
-$secondary: #BA6126;
+$primary: #5F474E;
+$secondary: #C75204;
+$background: #E4D6DC;
+$primaryto: #402460;
+$secondaryto: #E4D6DC;
 
 /*
 * Font Schemes
 */
 
-$heading-font: Verdana, sans-serif;
-$heading2-font: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-$logo-font: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-$subheading-font: "Trebuchet MS", Helvetica, sans-serif;
-$primary-font: Tahoma, Geneva, sans-serif;
+$heading-font: 'Lato', sans-serif;
+$heading2-font: 'Vidaloka', Palatino, serif;
+$logo-font: 'Lato', "Lucida Grande", sans-serif;
+$subheading-font: 'Lato', "Trebuchet MS", Helvetica, sans-serif;
+$primary-font: 'Open Sans', Geneva, sans-serif;

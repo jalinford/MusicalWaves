@@ -17,22 +17,22 @@ html {
 h1, h2, h3 {
 	margin: 0;
 	padding: 0;
-	padding-bottom: 1px;
 	padding-top: 5px;
 	color: $secondary;
-	font-family: $heading2-font;
+	font-family: $heading-font;
 	font-size: 3em;
 	a {
 		color: $secondary;
 		text-decoration: none;
 		&:hover {
 			text-decoration: underline;
+			color: $primary;
 		}
 	}
 }
 
 h4, h5, h6 {	
-	margin: 0;
+	margin: 0px;
 	padding: 0px;
 	color: $primary;
 	font-family: $subheading-font;
@@ -41,7 +41,6 @@ h4, h5, h6 {
 		color: $primary;
 		text-decoration: none;
 		&:hover {
-
 			text-decoration: underline;
 		}
 	}
@@ -54,7 +53,6 @@ h1 {
 	text-align:center;
 	margin: 5px;
 	text-decoration: none;
-	font-family: $heading-font;
 }
 
 h2 {
@@ -79,12 +77,17 @@ h5 {
 h6 {
 	font-size: 1.1em;
 	margin-bottom: 2px;
-	font-weight: 200;
 }
 
-p, ol, ul {
+p, ol, ul, a {
 	margin:.2em 0 .2em 0;
 	padding: 0px;
+	font-family: $primary-font;
+}
+
+a:hover {
+	color: $secondary;
+	text-decoration: none;
 }
 
 p {
@@ -118,7 +121,7 @@ body {
 	padding: 0px;
 	font-size: 12pt;
 	font-weight: 300;
-	background-color: $primary;	
+	background-color: $background;	
 	max-width:1100px;
 	min-width: 860px;
 	margin-left:auto;
@@ -141,14 +144,12 @@ aside {
 * Header
 */
 
-#pre-header {
-	height: 10px;
-	width: 100%;
-}
 
 header {
-	margin: 0px;
-	padding: 0px;
+	margin: 20px;
+	margin-top: 10px;
+	padding: 10px;
+	padding-top: 0px;
 	height: 450px;
 	background: url('waves.jpg') no-repeat top center;
 	background-size: 100%;
@@ -162,7 +163,7 @@ header:before {
 	content: '';
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: 90%;
 	height: 100%;
 	background-image: url('waves.jpg') no-repeat top center;
 	opacity: .1;
@@ -181,13 +182,13 @@ header:before {
 	top: 3em;
 	left: 0;
 	width: 100%;
-	margin: 25px;
+	margin: 15px;
 	h1 {
 		display: inline-block;
 		font-family: $logo-font;
 		font-size: 2.5em;
 		text-transform: uppercase;
-		font-weight: 700;
+		font-weight: 850;
 		text-decoration: none;
 	}
 	a {
@@ -209,7 +210,7 @@ header:before {
 #menu {
 	position: absolute;
 	right: 0;
-	top: 0;
+	top: -5px;
 	ul {
 		display: inline-block;
 	}
@@ -220,7 +221,7 @@ header:before {
 	}
 	li a {
 		display: block;
-		padding: 0em 1.5em;
+		padding: 0em 1.1em;
 		height: 150px;
 		letter-spacing: 0.20em;
 		line-height: 150px;
@@ -267,10 +268,30 @@ aside {
 	float: right;
 	width: 25%;
 	overflow: hidden;
+	h4, h5 {
 
-	.box1 {
-		margin-bottom: 3em;
 	}
+}
+
+
+.sidebar-list {
+	padding: 5px;
+	margin-bottom: 0.6em;
+	line-height: 130%;
+	font-size: 1.15em;
+	li a {
+		text-decoration: underline;
+		color: $primary;
+	}
+	li a:hover {
+		text-decoration: none;
+		color: $secondary;
+	}
+}
+
+.signup-box {
+	padding: 0px;
+	margin: 0px;
 }
 
 #mc_embed_signup{
@@ -283,20 +304,20 @@ aside {
 
  footer {
  	padding: 0.7em 0em;
-	h3 {
-		font-family: Georgia, fantasy;
+	h1 {
 		letter-spacing: 0.20em;
 		text-align: center;
 		text-transform: uppercase;
 		font-size: 0.80em;
 		color: $secondary;
 		line-height: 350%;
+		font-weight: 220;
 		a {
 			color: $secondary;
-			text-decoration: none;
+			text-decoration: underline;
 			&:hover {
-				color: $white;
-				text-decoration: underline;
+				color: $primary;
+				text-decoration: none;
 			}
 		}
  	}
@@ -398,6 +419,7 @@ img {
 	max-height: 280px;
 	float: right;
 	margin: 20px;
+	border: 2px solid $primary;
 }
 
 #thumbnail {
@@ -407,31 +429,13 @@ img {
 	margin: 12px;
 }
 
-.b_img {
 
+
+.title
+{
+	margin-bottom: 3em;
 }
 
-	.title
-	{
-		margin-bottom: 3em;
-	}
-
-	.title h2
-	{
-		letter-spacing: 0.20em;
-		font-weight: 700;
-		font-size: 2em;
-		color: #171717;
-	}
-	
-	.title .byline
-	{
-		letter-spacing: 0.15em;
-		text-transform: uppercase;
-		font-weight: 400;
-		font-size: 0.90em;
-		color: #6F6F6F;
-	}
 
 /*
 * Special Sections
@@ -440,8 +444,11 @@ img {
 .list {
 	margin: 5x;
 	padding: 5px;
+	h4, h5, h6 {
+
+	}
 	article {
-		border-top: 2px solid $secondary;
+		border-top: 2px solid $primary;
 	}
 	article:nth-child(1) {
 		border-top: none;
@@ -465,48 +472,32 @@ img {
 		box-shadow: 3px 3px 5px 2px;
 		width: 27%;
 		background: $secondary; /* for non-css3 browsers */
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5d3a0e', endColorstr='$secondary'); /* for IE */
-		background: -webkit-gradient(linear, left top, left bottom, from(#5d3a0e), to($secondary)); /* for webkit browsers */
-		background: -moz-linear-gradient(top,  #5d3a0e,  $secondary); /* for firefox 3.6+ */
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$secondaryto', endColorstr='$secondary'); /* for IE */
+		background: -webkit-gradient(linear, left top, left bottom, from($secondaryto), to($secondary)); /* for webkit browsers */
+		background: -moz-linear-gradient(top,  $secondaryto,  $secondary); /* for firefox 3.6+ */
 		h5, h6 {
-			color: #DCDCDC
+			color: black;
 		}
 		h5 {
-			font-family: $heading-font;
+
 			padding-top: 0.1em;
 			margin-bottom: 2px;
 		}
 		h6 {
-			padding-bottom: 0.1em;
+			padding-bottom: 0.2em;
+			font-family: $primary-font;
 		}
 	}
 	div:nth-of-type(odd) {
 		background: $primary; /* for non-css3 browsers */
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbbedd', endColorstr='$primary'); /* for IE */
-		background: -webkit-gradient(linear, left top, left bottom, from(#bbbedd), to($primary)); /* for webkit browsers */
-		background: -moz-linear-gradient(top,  #bbbedd,  $primary); /* for firefox 3.6+ */
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$primaryto', endColorstr='$primary'); /* for IE */
+		background: -webkit-gradient(linear, left top, left bottom, from($primaryto), to($primary)); /* for webkit browsers */
+		background: -moz-linear-gradient(top,  $primaryto,  $primary); /* for firefox 3.6+ */
 		h5, h6 {
-			color: black;
+			color: $background;
 		}
 	}
 }
-
-
-.sidebar-list {
-	padding: 5px;
-	padding-bottom: 8px;
-	line-height: 130%;
-	font-size: 1.15em;
-	li a {
-		text-decoration: underline;
-		color: $primary;
-	}
-	li a:hover {
-		text-decoration: none;
-		color: $secondary;
-	}
-}
-
 
 #artist {
 	padding-top: 10px;

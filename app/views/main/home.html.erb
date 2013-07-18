@@ -10,7 +10,7 @@ Join us for future performances as we celebrate the 17th century Italian and Nor
  <% if program == nil %>
  <h4>No concerts are currently coming up, but stay turned by subscribing to the email list on the left!</h4>
  <% else %>
- <h1>Next Concert</h1>
+ 
   <article id="program">
     <h2><%= link_to program.title, p_show_path(:title => program.title) %></h2>
     <h4><%= artist_list(program).html_safe %></h4>
