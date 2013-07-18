@@ -459,22 +459,29 @@ img {
 	overflow: hidden;
 	text-align: center;
 	div {
+		opacity: 0.9;
 		display: inline-block;
 		vertical-align: middle;
 		align: center;
 		text-align: left;
 		border-radius: 8px;
 		margin: 8px;
-		padding: 8px;
+		padding: .9em;
 		box-shadow: 3px 3px 5px 2px;
-		background-color: $primary;
 		width: 27%;
-				h5, h6 {
-			color: #C0C0C0;
+		background: $secondary; /* for non-css3 browsers */
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5d3a0e', endColorstr='$secondary'); /* for IE */
+		background: -webkit-gradient(linear, left top, left bottom, from(#5d3a0e), to($secondary)); /* for webkit browsers */
+		background: -moz-linear-gradient(top,  #5d3a0e,  $secondary); /* for firefox 3.6+ */
+		h5, h6 {
+			color: #DCDCDC
 		}
 	}
 	div:nth-of-type(odd) {
-		background-color: $secondary;
+		background: $primary; /* for non-css3 browsers */
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbbedd', endColorstr='$primary'); /* for IE */
+		background: -webkit-gradient(linear, left top, left bottom, from(#bbbedd), to($primary)); /* for webkit browsers */
+		background: -moz-linear-gradient(top,  #bbbedd,  $primary); /* for firefox 3.6+ */
 		h5, h6 {
 			color: black;
 		}

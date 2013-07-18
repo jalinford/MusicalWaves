@@ -2,7 +2,9 @@ ActiveAdmin.register Program do
 
   index do                            
     column :title                     
-    column :description
+    column :description do |program|
+      program.description.slice(0, 250)
+    end
     column("Artists") do |program|
       a_array = Array.new
       program.artists.each do |artist|

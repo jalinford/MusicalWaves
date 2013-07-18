@@ -9,11 +9,11 @@ module ProgramsHelper
     end
 
     def program_sort(programs)
-    	programs.sort { |a, b| first_performance(a) <=> first_performance(b) }
+    	programs.sort { |a, b| a.date_of_first_performance <=> b.date_of_first_performance }
     end
 
     def reverse_program_sort(programs)
-    	programs.sort { |a, b| first_performance(b) <=> first_performance(a) }
+    	programs.sort { |a, b| b.date_of_first_performance <=> a.date_of_first_performance  }
     end
 
     def program_performed(program)
@@ -37,7 +37,7 @@ module ProgramsHelper
    		programs = future_programs(Program.all)
    		next_program = programs[0] unless programs == []
    		programs.each do |program|
-   			if first_performance(program) < first_performance(next_program)
+   			if program.date_of_first_performance < next_program.date_of_first_performance
    				next_program = program
    			end
    		end
@@ -58,16 +58,6 @@ module ProgramsHelper
    			past_programs.push(program) if program_performed(program)
    		end
    		return past_programs
-   	end
-
-   	def first_performance(program)
-   		date = Time.now.to_date + 3.year
-   		program.concerts.each do |concert|
-   			if date > concert.date
-   				date = concert.date
-   			end
-   		end
-   		return date
    	end
 
     def concert_sort(program)

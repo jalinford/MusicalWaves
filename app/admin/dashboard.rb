@@ -16,15 +16,11 @@ ActiveAdmin.register_page "Dashboard" do
         column :title do |program|
           link_to program.title, admin_program_path(program)
         end
-        column :description
-
-        column("Artist - FIX LATER") {|program| link_to program.artists[0].name, admin_artists_path(program.artists[0])}
-        column("Artists") do |program|
-          a_array = Array.new
-          program.artists.each do |artist|
-            a_array.push(artist.name)
-          end
-          a_array.join(", ")
+        column :description do |program|
+          program.description.slice(0, 150)
+        end
+        column("Artists Names") do |program|
+          artist_list(program)
           end
       end
       strong { link_to "View All Programs", admin_programs_path }

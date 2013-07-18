@@ -6,8 +6,11 @@
 Join us for future performances as we celebrate the 17th century Italian and Northern European harpsichord music performed on a gorgeous 17th century Italian harpsichord copy crafted by renowned harpsichord builder John Phillips.</p>
 </section>
 
-<h1>Next Concert</h1>
- <% program = next_program%>
+ <% program = next_program unless next_program == nil %>
+ <% if program == nil %>
+ <h4>No concerts are currently coming up, but stay turned by subscribing to the email list on the left!</h4>
+ <% else %>
+ <h1>Next Concert</h1>
   <article id="program">
     <h2><%= link_to program.title, p_show_path(:title => program.title) %></h2>
     <h4><%= artist_list(program).html_safe %></h4>
@@ -31,3 +34,4 @@ Join us for future performances as we celebrate the 17th century Italian and Nor
     <a href="<%= p_show_path(:title => program.title) %>" class="button">More Information</a>
 
   </article>
+  <% end %>

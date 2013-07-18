@@ -7,4 +7,14 @@ class Program < ActiveRecord::Base
   has_many :artists, :through => :artist_performances
   accepts_nested_attributes_for :artists
   accepts_nested_attributes_for :concerts, :reject_if => lambda { |a| a[:location].blank? }, :allow_destroy => true
+
+  def date_of_first_performance
+  	list = self.concerts.order("date ASC")
+  	if list.empty?
+  		return Time.now.to_date + 2.year
+  	else
+  		return list.first.date
+  	end
+  end
+
 end

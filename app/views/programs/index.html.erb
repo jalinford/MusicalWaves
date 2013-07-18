@@ -1,5 +1,7 @@
 <h1>Upcoming Concerts</h1>
-
+ <% if future_programs(@programs) == [] %>
+ <h4>No concerts are currently coming up, but stay turned!</h4>
+ <% else %>
 <section class="list">
   <% program_sort(future_programs(@programs)).each do |program| %>
   <article id="program">
@@ -27,6 +29,7 @@
   </article>
   <% end %>
 </section>
+<% end %>
 <p></p>
 <h1>Past Programs</h1>
 
