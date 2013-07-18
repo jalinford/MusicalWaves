@@ -67,11 +67,11 @@ h2 {
 
 h3 {
 	font-weight: 460;
-	text-size: 2.3em;
+	text-size: 2.1em;
 }
 
 h4 {
-	font-weight: 300;
+	font-weight: 310;
 }
 
 h5 {
@@ -82,7 +82,7 @@ h5 {
 h6 {
 	font-size: 1.1em;
 	margin-bottom: 2px;
-	font-weight: 150;
+	font-weight: 180;
 }
 
 p, ol, ul {
@@ -486,8 +486,8 @@ img {
 #artist {
 	padding-top: 10px;
 	padding-bottom: 25px;
-	h2, h4, h5 {
-		margin-bottom: 5px;
+	h4, {
+		padding-bottom: 5px;
 	}
 	h5 {
 		margin-bottom: 1px;

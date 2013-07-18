@@ -1,3 +1,33 @@
 <section class="text">
-<p>Welcome to the Home Page for Musical Waves. You may find music by clicking Music above</p>
+<p>The Musical Waves house concert series brings the sounds of Baroque Music to the cliffs of San Francisco. Founded in 2009 by harpsichordist Elaine Thornburgh/Ilana Bar-David, audiences are able to enjoy intimate solo and ensemble concerts overlooking Sutro Heights Park next to The Cliff House.
+</p>
+
+<p>
+Join us for future performances as we celebrate the 17th century Italian and Northern European harpsichord music performed on a gorgeous 17th century Italian harpsichord copy crafted by renowned harpsichord builder John Phillips.</p>
 </section>
+
+<h1>Next Concert</h1>
+ <% program = next_program%>
+  <article id="program">
+    <h2><%= link_to program.title, p_show_path(:title => program.title) %></h2>
+    <h4><%= artist_list(program).html_safe %></h4>
+    <p></p>
+    <section class="concert-box">
+      <% concert_sort(program).each do |concert| %>
+        <div>  
+          <h5>Date:</h5><h6><%= concert.date.strftime('%A %B %d, %Y') %></h6>
+          <h5>Time:</h5><h6><%= concert.time %></h6>
+          <h5>Location:</h5><h6><%= concert.location %></h6>
+        </div>
+      <% end %>
+    </section>
+    <section class="text">
+      <p>
+        <% text = program.description.gsub(/\n/, ' ').html_safe %>
+        <%= truncate(text, length: 220) %>
+      </p>
+    </section>
+
+    <a href="<%= p_show_path(:title => program.title) %>" class="button">More Information</a>
+
+  </article>

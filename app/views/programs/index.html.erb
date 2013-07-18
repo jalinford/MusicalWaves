@@ -1,7 +1,7 @@
-<h1>Concerts</h1>
+<h1>Upcoming Concerts</h1>
 
 <section class="list">
-  <% @programs.each do |program| %>
+  <% program_sort(future_programs(@programs)).each do |program| %>
   <article id="program">
     <h2><%= link_to program.title, p_show_path(:title => program.title) %></h2>
     <h4><%= artist_list(program).html_safe %></h4>
@@ -15,6 +15,26 @@
         </div>
       <% end %>
     </section>
+    <section class="text">
+      <p>
+        <% text = program.description.gsub(/\n/, ' ').html_safe %>
+        <%= truncate(text, length: 220) %>
+      </p>
+    </section>
+
+    <a href="<%= p_show_path(:title => program.title) %>" class="button">More Information</a>
+
+  </article>
+  <% end %>
+</section>
+<p></p>
+<h1>Past Programs</h1>
+
+<section class="list">
+  <% program_sort(past_programs(@programs)).each do |program| %>
+  <article id="program">
+    <h3><%= link_to program.title, p_show_path(:title => program.title) %></h3>
+    <h5><%= artist_list(program).html_safe %></h5>
     <section class="text">
       <p>
         <% text = program.description.gsub(/\n/, ' ').html_safe %>

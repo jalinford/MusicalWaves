@@ -13,15 +13,27 @@ module ArtistsHelper
 
 	def artists_sorted(artists)
 		artists.sort { |a, b| 
-			[num_programs(b), last_name(a), first_name(a)] <=> 
-			[num_programs(a), last_name(b), first_name(b)] }
+			[artist_priority(b), num_programs(b), last_name(a), first_name(a)] <=> 
+			[artist_priority(a), num_programs(a), last_name(b), first_name(b)] }
 	end
 
 	def performance_list(artist)
 		p_array = Array.new
-        artist.programs.sort { |a, b| a.title  <=> b.title }.each do |program|
+        future_performances(artist).sort { |a, b| a.title  <=> b.title }.each do |program|
         	p_array.push(link_to program.title, p_show_path(:title => program.title))
         end
         p_array.join(", ")
+	end
+
+	def future_performances(artist)
+		future_programs(artist.programs)
+	end
+
+	def artist_priority(artist)
+		if future_performances(artist) == []
+			return 0
+		else
+			return 1
+		end
 	end
 end
