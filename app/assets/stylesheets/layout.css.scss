@@ -564,14 +564,6 @@ header {
 
 
 }
-/* iPhone 4 ----------- */
-@media (max-width : 640px) and (-webkit-min-device-pixel-ratio : 1.5), 
-only screen and (min-device-pixel-ratio : 1.5) {
-
-@import "small_screen";
-body { font-size: 200%; }
-
-}
 
 /*
 * End mobile
