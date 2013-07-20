@@ -135,7 +135,6 @@ body {
 	border-radius: 8px;
 	margin: 20px;
 	padding: 10px;
-	box-shadow: 3px 3px 5px 2px;
 }
 
 
@@ -154,7 +153,6 @@ header {
 	background-size: 100%;
 	overflow: hidden;
 	border-radius: 10px;
-	box-shadow: 3px 3px 5px 2px;
 }
 
 header:before {
@@ -399,7 +397,7 @@ aside {
 
 img {
 	margin: 15px;
-	max-width: 95%;
+	max-width: 93%;
 	max-height: 500px;
 	display: block;
 	margin-left: auto;
@@ -545,14 +543,6 @@ body {
 	min-width: 845px;
 	margin-left:auto;
 	margin-right:auto;
-}
-
-header {
-	box-shadow: none;
-}
-
-#container {
-	box-shadow: none;
 }
 
 }
