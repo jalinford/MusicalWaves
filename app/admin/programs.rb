@@ -27,7 +27,7 @@ ActiveAdmin.register Program do
 	  	f.has_many :concerts do |concert_f|
 				concert_f.form_buffers.last << content_tag(:h1, " ")
 	  		concert_f.form_buffers.last << content_tag(:h2, "Concert/Peformance")
-	  		concert_f.input :date, :start_year => 2010
+	  		concert_f.input :date, :start_year => 2011
 	  		concert_f.input :time, :hint => "write as 10 am or 2 pm (number followed by am/pm)"
 	  		concert_f.input :location
 	  		concert_f.input :price, :hint => "Only full value $ amounts, 50 is ok, 50.50 is not"

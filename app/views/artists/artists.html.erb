@@ -5,10 +5,11 @@
 	<article id="artist">
 		<h2><%= link_to artist.name, a_show_path(:name => artist.name) %></h2>
 		<h5><%= artist.instrument %></h5>
-		<% if !artist.picture.empty? %>
-			<a href="<%= artist.picture %>"><img src="<%= artist.picture %>" alt="" class="s_img" /></a>
-		<% end %>
+
 		<section class="text">
+			<% if !artist.picture.empty? %>
+				<a href="<%= artist.picture %>"><img src="<%= artist.picture %>" alt="" class="s_img" /></a>
+			<% end %>
 			<p>
 				<% text = artist.bio.gsub(/\n/, ' ').html_safe %>
 				<%= truncate(text, length: 290) %>
