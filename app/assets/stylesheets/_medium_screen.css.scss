@@ -92,9 +92,9 @@ header:before {
 	li a {
 		display: block;
 		padding: 0em 0.7em;
-		height: 150px;
+		height: none;
 		letter-spacing: 0.20em;
-		line-height: 150px;
+		line-height: none;
 		text-decoration: none;
 		font-size: 1.32em;
 		font-weight: 650;
@@ -128,10 +128,16 @@ header:before {
 	}
 }
 
+#menu .current_page_item a {
+	background: none;
+}
+
 .concert-box {
 	div {
-		margin: .44em;
-		width: 39%;
+		margin: .6em;
+		margin-right: 5em;
+		margin-left: 5em;
+		width: 67%;
 	}
 }
 
@@ -163,15 +169,16 @@ section {
 	margin: .3em;
 	padding: .3em;
 	h2 {
-		font-size: 2.4em
+		font-size: 2.5em
 	}
 	h3 {
-		font-size: 2.1em;
+		font-size: 2.2em;
 	}
 	h4 {
-		font-size: 1.6em;
+		font-size: 1.7em;
 	}
 	h5 {
-		font-size: 1.5em;
+		font-size: 1.6em;
 	}
 }
+

@@ -119,6 +119,8 @@ header:before {
 		text-transform: uppercase;
 		outline: 0;
 		color: $primary;
+		line-height: none;
+		text-decoration: none;
 		text-shadow:
    			-1px -1px 0 $white,
    			1px -1px 0 $white,
@@ -143,6 +145,12 @@ header:before {
 	background: none;
 	font-size: 1.25em;
 	font-weight: 750;
+	background: none;
+}
+
+
+#menu .current_page_item a {
+	background: none;
 }
 
 /*
@@ -237,4 +245,20 @@ section {
 	min-width: 0;
 	float: none;
 	margin: .4em;
+}
+
+h1 {
+	font-size: 1.8em
+}
+h2 {
+	font-size: 1.6em
+}
+h3 {
+	font-size: 1.5em;
+}
+h4 {
+	font-size: 1.4em;
+}
+h5 {
+	font-size: 1.3em;
 }
