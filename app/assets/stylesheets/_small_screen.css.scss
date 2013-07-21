@@ -188,22 +188,22 @@ h1 {
 	text-align:center;
 	margin: 2px;
 	text-decoration: none;
-	text-size: 2.5em;
+	text-size: 2.1em;
 }
 
 h2 {
 	font-weight: 550;
-	text-size: 2.2em;
+	text-size: 1.9em;
 }
 
 h3 {
 	font-weight: 420;
-	text-size: 1.9m;
+	text-size: 1.7em;
 }
 
 h4 {
 	font-weight: 310;
-	text-size: 1.5m;
+	text-size: 1.4em;
 }
 
 h5 {
@@ -255,4 +255,12 @@ section {
 	h5 {
 		font-size: 1.3em;
 	}
+}
+
+.s_img {
+	max-width: 75%;
+	max-height: 280px;
+	min-width: 150px;
+	float: none;
+	margin: 15px;
 }
