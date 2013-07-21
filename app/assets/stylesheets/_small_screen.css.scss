@@ -188,17 +188,17 @@ h1 {
 	text-align:center;
 	margin: 2px;
 	text-decoration: none;
-	text-size: 2.1em;
+	text-size: 1.9em;
 }
 
 h2 {
 	font-weight: 550;
-	text-size: 1.9em;
+	text-size: 1.7em;
 }
 
 h3 {
 	font-weight: 420;
-	text-size: 1.7em;
+	text-size: 1.5em;
 }
 
 h4 {
@@ -244,10 +244,10 @@ section {
 	margin: .2em;
 	padding: .2em;
 	h2 {
-		font-size: 2.1em
+		font-size: 1.7em
 	}
 	h3 {
-		font-size: 1.8em;
+		font-size: 1.5em;
 	}
 	h4 {
 		font-size: 1.4em;
@@ -263,4 +263,12 @@ section {
 	min-width: 150px;
 	float: none;
 	margin: 15px;
+}
+
+#thumbnail {
+	max-width: 55%;
+	max-height: 180px;
+	min-width: 0;
+	float: none;
+	margin: .4em;
 }
