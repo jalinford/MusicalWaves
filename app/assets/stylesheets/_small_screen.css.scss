@@ -18,6 +18,7 @@ body {
 	min-width: 320px;
 	margin-left:auto;
 	margin-right:auto;
+	-webkit-text-size-adjust: 100%;
 }
 
 #container {
@@ -179,41 +180,6 @@ aside {
 		margin: .6em;
 		width: 80%;
 	}
-}
-
-h1 {
-	font-weight: 700;
-	font-stretch: expanded;
-	letter-spacing:1.3px;
-	text-align:center;
-	margin: 2px;
-	text-decoration: none;
-	text-size: 1.9em;
-}
-
-h2 {
-	font-weight: 550;
-	text-size: 1.7em;
-}
-
-h3 {
-	font-weight: 420;
-	text-size: 1.5em;
-}
-
-h4 {
-	font-weight: 310;
-	text-size: 1.4em;
-}
-
-h5 {
-	font-size: 1.3em;
-	font-weight: 220;
-}
-
-h6 {
-	font-size: 1.1em;
-	margin-bottom: 2px;
 }
 
 p {
