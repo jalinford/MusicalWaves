@@ -1,38 +1,17 @@
+
 /* 
 *
-* Basic styling for mobile devices
+* Basic styling for normal tablets
 *
 */
-
 
 /*
 * Body
 */
 
-
-body {
-	margin: 0px;
-	padding: 0px;
-	background-color: $primary;	
-	width: 100%;
-	min-width: 320px;
-	margin-left:auto;
-	margin-right:auto;
-}
-
 #container {
-	background-color: $background;
-	border-radius: 8px;
-	margin: 10px;
-	padding: 5px;
+margin: 15px;
 }
-
-aside {
-	padding-top: 25px;
-	float: left;
-	clear: left;
-}
-
 
 /*
 * Header
@@ -40,14 +19,14 @@ aside {
 
 
 header {
-	padding: 3px;
+	padding: 5px;
 	padding-top: 0px;
-	height: 220px;
+	height: 380px;
 	background: url('waves.jpg') no-repeat top center;
 	background-size: 100%;
 	overflow: hidden;
 	border-radius: 10px;
-	margin: 10px;
+	margin: 15px;
 }
 
 header:before {
@@ -78,7 +57,7 @@ header:before {
 	h1 {
 		display: inline-block;
 		font-family: $logo-font;
-		font-size: 2.1em;
+		font-size: 2.5em;
 		text-transform: uppercase;
 		font-weight: 850;
 		text-decoration: none;
@@ -101,20 +80,24 @@ header:before {
 #menu {
 	position: absolute;
 	right: 0;
-	top: 6em;
+	top: 17em;
 	ul {
+		display: inline-block;
 	}
 	li {
+		display: block;
 		float: left;
 		text-align: center;
-		position:relative;
 	}
 	li a {
-		padding: 0em 0.25em;
-		letter-spacing: 0.1em;
+		display: block;
+		padding: 0em 0.7em;
+		height: 150px;
+		letter-spacing: 0.20em;
+		line-height: 150px;
 		text-decoration: none;
-		font-size: 1.2em;
-		font-weight: 500;
+		font-size: 1.32em;
+		font-weight: 650;
 		text-transform: uppercase;
 		outline: 0;
 		color: $primary;
@@ -131,7 +114,7 @@ header:before {
 	text-decoration: underline;
 }
 	
-#menu .current_page_item 
+#menu .current_page_item  {
 	a {
 	text-shadow:
    			-1px -1px 0 $white,
@@ -140,43 +123,14 @@ header:before {
    			1px 1px 0 $white; 
 	color: $secondary;
 	background: none;
-	font-size: 1.25em;
+	font-size: 1.5em;
 	font-weight: 750;
-}
-
-/*
-* Sections
-*/
-
-section {
-	overflow: hidden;
-
-	.content {
-		width: 100%;
-		float: left;
-		position: relative;
-		padding: 10px;
 	}
-
 }
-
-
-/*
-/* Sidebar  
-*/
-
-aside {
-	ppadding-top: 25px;
-	float: left;
-	clear: left;
-	width: 100%;
-	overflow: hidden;
-}
-
 
 .concert-box {
 	div {
-		margin: .6em;
-		width: 80%;
+		margin: .44em;
+		width: 39%;
 	}
 }
