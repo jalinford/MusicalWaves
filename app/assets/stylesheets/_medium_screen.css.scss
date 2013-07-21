@@ -134,3 +134,44 @@ header:before {
 		width: 39%;
 	}
 }
+
+p {
+	padding: .4em;
+	font-family: $primary-font;
+	font-size: 1.2em;
+	line-height: 150%;
+	text-indent: none;
+}
+
+.text {
+	text-indent: none;
+}
+
+section {
+	overflow: hidden;
+
+	.content {
+		width: 72%;
+		float: left;
+		position: relative;
+		padding: 3px;
+	}
+
+}
+
+.list {
+	margin: .3em;
+	padding: .3em;
+	h2 {
+		font-size: 2.4em
+	}
+	h3 {
+		font-size: 2.1em;
+	}
+	h4 {
+		font-size: 1.6em;
+	}
+	h5 {
+		font-size: 1.5em;
+	}
+}

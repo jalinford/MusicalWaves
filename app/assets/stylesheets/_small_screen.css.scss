@@ -42,7 +42,7 @@ aside {
 header {
 	padding: 3px;
 	padding-top: 0px;
-	height: 220px;
+	height: 200px;
 	background: url('waves.jpg') no-repeat top center;
 	background-size: 100%;
 	overflow: hidden;
@@ -178,5 +178,46 @@ aside {
 	div {
 		margin: .6em;
 		width: 80%;
+	}
+}
+
+p {
+	padding: .3em;
+	font-family: $primary-font;
+	font-size: 1.1em;
+	line-height: 140%;
+	text-indent: none;
+}
+
+.text {
+	text-indent: none;
+}
+
+section {
+	overflow: hidden;
+
+	.content {
+		width: 90%;
+		float: left;
+		position: relative;
+		padding: 3px;
+	}
+
+}
+
+.list {
+	margin: .2em;
+	padding: .2em;
+	h2 {
+		font-size: 2.1em
+	}
+	h3 {
+		font-size: 1.8em;
+	}
+	h4 {
+		font-size: 1.4em;
+	}
+	h5 {
+		font-size: 1.3em;
 	}
 }
