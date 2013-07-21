@@ -42,7 +42,7 @@ aside {
 header {
 	padding: 3px;
 	padding-top: 0px;
-	height: 200px;
+	height: 196px;
 	background: url('waves.jpg') no-repeat top center;
 	background-size: 100%;
 	overflow: hidden;
@@ -179,6 +179,41 @@ aside {
 		margin: .6em;
 		width: 80%;
 	}
+}
+
+h1 {
+	font-weight: 700;
+	font-stretch: expanded;
+	letter-spacing:1.3px;
+	text-align:center;
+	margin: 2px;
+	text-decoration: none;
+	text-size: 2.5em;
+}
+
+h2 {
+	font-weight: 550;
+	text-size: 2.2em;
+}
+
+h3 {
+	font-weight: 420;
+	text-size: 1.9m;
+}
+
+h4 {
+	font-weight: 310;
+	text-size: 1.5m;
+}
+
+h5 {
+	font-size: 1.3em;
+	font-weight: 220;
+}
+
+h6 {
+	font-size: 1.1em;
+	margin-bottom: 2px;
 }
 
 p {

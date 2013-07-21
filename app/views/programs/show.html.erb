@@ -30,7 +30,7 @@
   <section class="list">
     <% @program.artists.each do |artist| %>
       <article class="artist-small">
-        <%<% if !artist.picture.empty? %>
+        <% if !artist.picture.empty? %>
           <a href="<%= artist.picture %>"><img src="<%= artist.picture %>" alt="" class="" id="thumbnail"/></a>
         <% end %>
         <h3><%= link_to artist.name, a_show_path(:name => artist.name) %></h3>
