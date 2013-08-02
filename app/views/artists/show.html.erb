@@ -11,7 +11,7 @@
 	<% end %>
 	<section class="text">
 		<p>
-			<%= @artist.bio.gsub(/\n/, '</p><p>').html_safe %>
+			<%= @artist.bio.html_safe %>
 		</p>
 	</section>
 </article>

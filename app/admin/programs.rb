@@ -3,7 +3,7 @@ ActiveAdmin.register Program do
   index do                            
     column :title                     
     column :description do |program|
-      program.description.slice(0, 250)
+      truncate(strip_tags(program.description), :length=>250)
     end
     column("Artists") do |program|
       a_array = Array.new
@@ -20,7 +20,7 @@ ActiveAdmin.register Program do
   form do |f|                         
 	f.inputs "Program Details" do       
 	  f.input :title                  
-	  f.input :description, :hint => "Do not add any extra spaces between paragraphs"             
+	  f.input :description, :as => :html_editor             
 	  f.input :website, :hint => "Place the whole URL of a related link"
 	  f.input :artists, :as => :check_boxes
 

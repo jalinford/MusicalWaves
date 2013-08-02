@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 
 gem 'activeadmin'
+gem 'active_admin_editor'
 gem 'meta_search',	'>= 1.1.0.pre'
 
 # Bundle edge Rails instead:

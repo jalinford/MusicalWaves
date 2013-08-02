@@ -4,7 +4,7 @@ ActiveAdmin.register Artist do
     column :name                     
     column :instrument
     column :bio do |artist|
-      artist.bio.slice(0, 250)
+      truncate(strip_tags(artist.bio), :length=>250)
     end
     column("Programs") do |artist|
       p_array = Array.new
@@ -24,7 +24,7 @@ ActiveAdmin.register Artist do
       f.input :name                  
       f.input :instrument               
       f.input :picture, :hint => "Place the whole URL of the photo"
-      f.input :bio, :hint => "Do not add any extra spaces between paragraphs"
+      f.input :bio, :as => :html_editor 
       f.input :programs, :as => :check_boxes
     end                               
     f.actions                         

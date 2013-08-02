@@ -11,8 +11,7 @@
 				<a href="<%= artist.picture %>"><img src="<%= artist.picture %>" alt="" class="s_img" /></a>
 			<% end %>
 			<p>
-				<% text = artist.bio.gsub(/\n/, ' ').html_safe %>
-				<%= truncate(text, length: 290) %>
+				<%= truncate(strip_tags(artist.bio), :length=>290) %>
 			</p>
 		</section>
 

@@ -17,7 +17,7 @@ ActiveAdmin.register_page "Dashboard" do
           link_to program.title, admin_program_path(program)
         end
         column :description do |program|
-          program.description.slice(0, 150)
+          truncate(strip_tags(program.description), :length=>180)
         end
         column("Artists") do |program|
           a_array = Array.new

@@ -19,8 +19,7 @@
     </section>
     <section class="text">
       <p>
-        <% text = program.description.gsub(/\n/, ' ').html_safe %>
-        <%= truncate(text, length: 220) %>
+        <%= truncate(strip_tags(program.description), :length=>220) %>
       </p>
     </section>
 
@@ -40,8 +39,7 @@
     <h5><%= artist_list(program).html_safe %></h5>
     <section class="text">
       <p>
-        <% text = program.description.gsub(/\n/, ' ').html_safe %>
-        <%= truncate(text, length: 220) %>
+        <%= truncate(strip_tags(program.description), :length=>220) %>
       </p>
     </section>
 
