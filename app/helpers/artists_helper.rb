@@ -26,7 +26,7 @@ module ArtistsHelper
         future_performances(artist).sort { |a, b| a.title  <=> b.title }.each do |program|
         	p_array.push(link_to program.title, p_show_path(:title => program.title))
         end
-        p_array.join(", ")
+        p_array.join(",  ")
 	end
 
 	def future_performances(artist)

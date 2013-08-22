@@ -26,8 +26,7 @@ Join us for future performances as we celebrate the 17th century Italian and Nor
     </section>
     <section class="text">
       <p>
-        <% text = program.description.gsub(/\n/, ' ').html_safe %>
-        <%= truncate(text, length: 220) %>
+        <%= truncate(strip_tags(program.description), :length=>220) %>
       </p>
     </section>
 
