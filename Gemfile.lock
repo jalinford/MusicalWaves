@@ -97,7 +97,6 @@ GEM
     mime-types (1.23)
     multi_json (1.7.7)
     orm_adapter (0.4.0)
-    pg (0.15.1)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
@@ -171,7 +170,6 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails (= 2.3.0)
   meta_search (>= 1.1.0.pre)
-  pg
   rails (= 3.2.13)
   rspec-rails (~> 2.0)
   sass-rails (~> 3.2.3)
