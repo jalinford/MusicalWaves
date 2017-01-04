@@ -2,16 +2,14 @@
 <p>The Musical Waves house concert series brings the sounds of Baroque Music to the cliffs of San Francisco. Founded in 2009 by harpsichordist Elaine Thornburgh/Ilana Bar-David, audiences are able to enjoy intimate solo and ensemble concerts overlooking Sutro Heights Park next to The Cliff House.
 </p>
 
-<p>
-Join us for future performances, like the one below.
-</p>
 </section>
 
  <% program = next_program unless next_program == nil %>
  <% if program == nil %>
- <h4>No concerts are currently coming up, but stay tuned by subscribing to the email list on the left!</h4>
+ <h4>Unfortunately no concerts are currently coming up, but stay tuned by subscribing to the email list!</h4>
  <% else %>
- 
+  <h5>Upcoming Concerts:</h5>
+  <br>
   <article id="program">
     <h2><%= link_to program.title, p_show_path(:title => program.title) %></h2>
     <h4><%= artist_list(program).html_safe %></h4>

@@ -97,20 +97,20 @@ a:hover {
 }
 
 p {
-	padding: 1.1em;
+	padding: 1.1em 0;
 	font-family: $primary-font;
 	font-size: 1.1em;
 	line-height: 160%;
 }
 
 .text {
-	text-indent: 2em;
 }
 
 .text:first-letter { 
-	font-size:220%;
+	font-size:2.2em;
+	font-weight: bold;
 	color: $secondary;
-	margin: 1px;
+	margin-right: .1em;
 }
 
 strong {
@@ -272,7 +272,7 @@ aside {
 }
 
 .sidebar-list {
-	padding: 1em;
+	padding: 1em 0;
 	margin-bottom: 0.6em;
 	line-height: 130%;
 	font-size: 1.15em;
@@ -344,6 +344,7 @@ aside {
 	font-weight: 600;
 	font-size: 0.90em;
 	color: $white;
+	border: 0;
 }
 
 #ticket-button {
@@ -383,7 +384,6 @@ aside {
 }
 
 .button:hover {
-	color: $primary;
 	text-decoration: none;
 }
 

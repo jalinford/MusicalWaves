@@ -6,7 +6,6 @@ class Program < ActiveRecord::Base
   has_many :artist_performances, :dependent => :destroy
   has_many :artists, :through => :artist_performances
   accepts_nested_attributes_for :artists
-  accepts_nested_attributes_for :artist_performances
   accepts_nested_attributes_for :concerts, :allow_destroy => true
 
   def date_of_first_performance
